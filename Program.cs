@@ -59,16 +59,17 @@ namespace ShowDesktop
 
             // Define the full path to the expected shortcut file (appName + ".lnk")
             string shortcutPath = Path.Combine(taskBarFolderPath, appName + ".lnk");
+            string appPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
 
             // Versioning information for display
             Version version = Assembly.GetExecutingAssembly().GetName().Version;
             string appVersion = $"{version.Major}.{version.Minor}.{version.Build}";
             string helpStringCmd = 
                    String.Format("{3}{0} {1}, {2} {3}{3}", Assembly.GetExecutingAssembly().GetName().Name, appVersion, ShowDesktop.Properties.Resources.Copyright, Environment.NewLine) +
-                   String.Format(ShowDesktop.Properties.Resources.HelpTextCmd, System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), Environment.NewLine, System.Diagnostics.Process.GetCurrentProcess().ProcessName) + "\n";
+                   String.Format(ShowDesktop.Properties.Resources.HelpTextCmd, appPath, Environment.NewLine, System.Diagnostics.Process.GetCurrentProcess().ProcessName) + "\n";
             string helpStringGui = 
                    String.Format("{0} {1}{2}{2}", Assembly.GetExecutingAssembly().GetName().Name, appVersion, Environment.NewLine) +
-                   String.Format(ShowDesktop.Properties.Resources.HelpTextGui, System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), Environment.NewLine, System.Diagnostics.Process.GetCurrentProcess().ProcessName) + "\n";
+                   String.Format(ShowDesktop.Properties.Resources.HelpTextGui, appPath, Environment.NewLine, System.Diagnostics.Process.GetCurrentProcess().ProcessName) + "\n";
 
             // Check if the shortcut exists
             if (!File.Exists(shortcutPath))
@@ -87,6 +88,7 @@ namespace ShowDesktop
                 else
                 {
                     MessageBox.Show(helpStringGui, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Process.Start(appPath);
                     Application.Exit();
                 }
             }

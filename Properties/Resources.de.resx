@@ -121,7 +121,7 @@
     <value>©2024 Manfred Mueller</value>
   </data>
   <data name="HelpTextGui" xml:space="preserve">
-    <value>{0}{1}im Explorer öffnen, Rechtsklick auf {2}.exe{1}und 'An Taskleiste anheften' auswählen.</value>
+    <value>Im folgenden Fenster Rechtsklick auf {2}.exe{1}und 'An Taskleiste anheften' auswählen.</value>
   </data>
   <data name="HelpTextCmd" xml:space="preserve">
     <value>{0} im Explorer öffnen{1}und nach Rechtsklick auf {2}.exe 'An Taskleiste anheften' wählen.</value>
