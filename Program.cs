@@ -69,7 +69,7 @@ namespace ShowDesktop
                    String.Format(ShowDesktop.Properties.Resources.HelpTextCmd, appPath, Environment.NewLine, System.Diagnostics.Process.GetCurrentProcess().ProcessName) + "\n";
             string helpStringGui = 
                    String.Format("{0} {1}{2}{2}", Assembly.GetExecutingAssembly().GetName().Name, appVersion, Environment.NewLine) +
-                   String.Format(ShowDesktop.Properties.Resources.HelpTextGui, appPath, Environment.NewLine, System.Diagnostics.Process.GetCurrentProcess().ProcessName) + "\n";
+                   String.Format(ShowDesktop.Properties.Resources.HelpTextGui, Environment.NewLine, System.Diagnostics.Process.GetCurrentProcess().ProcessName) + "\n";
 
             // Check if the shortcut exists
             if (!File.Exists(shortcutPath))

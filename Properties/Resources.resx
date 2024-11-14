@@ -101,7 +101,7 @@
     <value>©2024 Manfred Mueller</value>
   </data>
   <data name="HelpTextGui" xml:space="preserve">
-    <value>Choose 'pin to taskbar'{0}after right click on {1}exe{0}in the following window.</value>
+    <value>Choose 'pin to taskbar' after right click on {1}exe{0}in the following window.</value>
   </data>
   <data name="HelpTextCmd" xml:space="preserve">
     <value>Open {0} in explorer window{1}and choose 'pin to taskbar' after right click on {2}.exe.</value>

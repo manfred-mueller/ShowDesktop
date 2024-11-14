@@ -79,7 +79,7 @@ namespace ShowDesktop.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Choose &apos;pin to taskbar&apos;{0}after right click on {1}exe{0}in the following window. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Choose &apos;pin to taskbar&apos; after right click on {1}exe{0}in the following window. ähnelt.
         /// </summary>
         internal static string HelpTextGui {
             get {
