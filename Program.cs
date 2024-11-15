@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using System.Collections.Concurrent;
 using System.Windows.Forms;
 using Version = System.Version;
+using System.Runtime.InteropServices.ComTypes;
 
 
 namespace ShowDesktop
@@ -89,6 +90,11 @@ namespace ShowDesktop
                 {
                     MessageBox.Show(helpStringGui, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Process.Start(appPath);
+                    string filePath = Path.Combine(appPath, "nircmd.exe");
+                    if (File.Exists(filePath))
+                    {
+                        File.Delete(filePath);
+                    }
                     Application.Exit();
                 }
             }
